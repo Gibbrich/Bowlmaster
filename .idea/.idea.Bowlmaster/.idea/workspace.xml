@@ -1,7 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="30fa6ad8-fd6c-44d0-8564-14c90a1b6822" name="Default" comment="" />
+    <list default="true" id="30fa6ad8-fd6c-44d0-8564-14c90a1b6822" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.Bowlmaster/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.Bowlmaster/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Bowlmaster/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack.meta" afterPath="$PROJECT_DIR$/Assets/START Pack.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Audio.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Audio.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Audio/ball rolling.wav.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Audio/ball rolling.wav.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Audio/tap.wav.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Audio/tap.wav.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Blender Imports.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Blender Imports.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Blender Imports/Bowling Pin.blend.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Blender Imports/Bowling Pin.blend.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Blender Imports/Materials.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Blender Imports/Materials.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Blender Imports/Materials/Pin_Body_001.mat" afterPath="$PROJECT_DIR$/Assets/START Pack/Blender Imports/Materials/Pin_Body_001.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Blender Imports/Materials/Pin_Body_001.mat.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Blender Imports/Materials/Pin_Body_001.mat.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Blender Imports/Materials/Pin_Stripe_001.mat" afterPath="$PROJECT_DIR$/Assets/START Pack/Blender Imports/Materials/Pin_Stripe_001.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Blender Imports/Materials/Pin_Stripe_001.mat.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Blender Imports/Materials/Pin_Stripe_001.mat.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Fonts.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Fonts.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Fonts/absender1.ttf.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Fonts/absender1.ttf.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Images.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Images.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Images/Jupiter.gif.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Images/Jupiter.gif.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Images/Materials.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Images/Materials.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Images/Materials/Jupiter.mat" afterPath="$PROJECT_DIR$/Assets/START Pack/Images/Materials/Jupiter.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Images/Materials/Jupiter.mat.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Images/Materials/Jupiter.mat.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Images/Materials/football.mat" afterPath="$PROJECT_DIR$/Assets/START Pack/Images/Materials/football.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Images/Materials/football.mat.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Images/Materials/football.mat.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Images/arrow.png.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Images/arrow.png.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Images/football.png.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Images/football.png.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Images/lane.jpeg.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Images/lane.jpeg.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Scripts.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Scripts.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Scripts/ActionMaster2.cs" afterPath="$PROJECT_DIR$/Assets/START Pack/Scripts/ActionMaster2.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Scripts/ActionMaster2.cs.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Scripts/ActionMaster2.cs.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Scripts/OurScoreDisplayTest1.cs" afterPath="$PROJECT_DIR$/Assets/START Pack/Scripts/OurScoreDisplayTest1.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Scripts/OurScoreDisplayTest1.cs.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Scripts/OurScoreDisplayTest1.cs.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Skyboxes.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Skyboxes.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024/Stars1024.mat" afterPath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024/Stars1024.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024/Stars1024.mat.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024/Stars1024.mat.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024/xneg.png.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024/xneg.png.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024/xpos.png.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024/xpos.png.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024/yneg.png.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024/yneg.png.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024/ypos.png.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024/ypos.png.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024/zneg.png.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024/zneg.png.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024/zpos.png.meta" afterPath="$PROJECT_DIR$/Assets/START Pack/Skyboxes/Stars1024/zpos.png.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/CameraControl.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraControl.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/_Scenes/Game.unity" afterPath="$PROJECT_DIR$/Assets/_Scenes/Game.unity" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,17 +56,17 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Ball.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Ball.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+            <state relative-caret-position="187">
+              <caret line="13" column="59" lean-forward="false" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
               <folding>
-                <marker date="1507232116063" expanded="false" signature="6:78" ph="..." />
-                <marker date="1507232116063" expanded="true" signature="191:489" ph="{...}" />
-                <marker date="1507232116063" expanded="true" signature="283:417" ph="{...}" />
-                <marker date="1507232116063" expanded="true" signature="475:487" ph="{...}" />
+                <marker date="1507279936699" expanded="false" signature="6:78" ph="..." />
+                <marker date="1507279936699" expanded="true" signature="191:495" ph="{...}" />
+                <marker date="1507279936699" expanded="true" signature="306:423" ph="{...}" />
+                <marker date="1507279936699" expanded="true" signature="481:493" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -30,14 +75,14 @@
       <file leaf-file-name="CameraControl.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraControl.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="19" column="56" lean-forward="false" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+            <state relative-caret-position="289">
+              <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="56" />
               <folding>
-                <marker date="1507232992090" expanded="false" signature="6:78" ph="..." />
-                <marker date="1507232992090" expanded="true" signature="122:515" ph="{...}" />
-                <marker date="1507232992090" expanded="true" signature="232:287" ph="{...}" />
-                <marker date="1507232992090" expanded="true" signature="345:513" ph="{...}" />
-                <marker date="1507232992090" expanded="true" signature="409:507" ph="{...}" />
+                <marker date="1507280234425" expanded="false" signature="6:78" ph="..." />
+                <marker date="1507280234425" expanded="true" signature="122:535" ph="{...}" />
+                <marker date="1507280234425" expanded="true" signature="232:318" ph="{...}" />
+                <marker date="1507280234425" expanded="true" signature="376:533" ph="{...}" />
+                <marker date="1507280234425" expanded="true" signature="440:527" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -45,9 +90,12 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ball.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraControl.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -66,9 +114,10 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
       <flattenPackages />
@@ -152,11 +201,12 @@
       <option name="presentableId" value="Default" />
       <updated>1507231304471</updated>
       <workItem from="1507231319136" duration="1796000" />
+      <workItem from="1507279556465" duration="1268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1796000" />
+    <option name="totallyTimeSpent" value="3064000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -168,28 +218,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.256447" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -206,27 +255,54 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Ball.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="221">
           <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
           <folding>
-            <marker date="1507232116063" expanded="false" signature="6:78" ph="..." />
-            <marker date="1507232116063" expanded="true" signature="191:489" ph="{...}" />
-            <marker date="1507232116063" expanded="true" signature="283:417" ph="{...}" />
-            <marker date="1507232116063" expanded="true" signature="475:487" ph="{...}" />
+            <marker date="1507279936699" expanded="false" signature="6:78" ph="..." />
+            <marker date="1507279936699" expanded="true" signature="191:495" ph="{...}" />
+            <marker date="1507279936699" expanded="true" signature="306:423" ph="{...}" />
+            <marker date="1507279936699" expanded="true" signature="481:493" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraControl.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="323">
           <caret line="19" column="56" lean-forward="false" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
           <folding>
-            <marker date="1507232992090" expanded="false" signature="6:78" ph="..." />
-            <marker date="1507232992090" expanded="true" signature="122:515" ph="{...}" />
-            <marker date="1507232992090" expanded="true" signature="232:287" ph="{...}" />
-            <marker date="1507232992090" expanded="true" signature="345:513" ph="{...}" />
-            <marker date="1507232992090" expanded="true" signature="409:507" ph="{...}" />
+            <marker date="1507280234425" expanded="false" signature="6:78" ph="..." />
+            <marker date="1507280234425" expanded="true" signature="122:535" ph="{...}" />
+            <marker date="1507280234425" expanded="true" signature="232:318" ph="{...}" />
+            <marker date="1507280234425" expanded="true" signature="376:533" ph="{...}" />
+            <marker date="1507280234425" expanded="true" signature="440:527" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Ball.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="59" lean-forward="false" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
+          <folding>
+            <marker date="1507279936699" expanded="false" signature="6:78" ph="..." />
+            <marker date="1507279936699" expanded="true" signature="191:495" ph="{...}" />
+            <marker date="1507279936699" expanded="true" signature="306:423" ph="{...}" />
+            <marker date="1507279936699" expanded="true" signature="481:493" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraControl.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="56" />
+          <folding>
+            <marker date="1507280234425" expanded="false" signature="6:78" ph="..." />
+            <marker date="1507280234425" expanded="true" signature="122:535" ph="{...}" />
+            <marker date="1507280234425" expanded="true" signature="232:318" ph="{...}" />
+            <marker date="1507280234425" expanded="true" signature="376:533" ph="{...}" />
+            <marker date="1507280234425" expanded="true" signature="440:527" ph="{...}" />
           </folding>
         </state>
       </provider>

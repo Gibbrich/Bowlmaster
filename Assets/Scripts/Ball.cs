@@ -6,11 +6,12 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class Ball : MonoBehaviour
 {
-    public float velocityForce = 200;
+    public Vector3 launchVelocity = new Vector3(0, 0, 200);
+
     // Use this for initialization
     void Start()
     {
-        GetComponent<Rigidbody>().velocity = Vector3.forward * velocityForce;
+        GetComponent<Rigidbody>().velocity = launchVelocity;
         GetComponent<AudioSource>().Play();
     }
 
