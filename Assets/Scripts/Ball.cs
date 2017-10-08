@@ -11,7 +11,14 @@ public class Ball : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        GetComponent<Rigidbody>().velocity = launchVelocity;
+        GetComponent<Rigidbody>().useGravity = false;
+    }
+
+    public void Launch(Vector3 velocity)
+    {
+        GameManager.IsGameStarted = true;
+        GetComponent<Rigidbody>().useGravity = true;
+        GetComponent<Rigidbody>().velocity = velocity;
         GetComponent<AudioSource>().Play();
     }
 
