@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Pin : MonoBehaviour
 {
-    public float StandingThreshold;
-    
-    // Use this for initialization
+    public float StandingThreshold = 10;
+
     void Start()
     {
     }
@@ -20,9 +19,9 @@ public class Pin : MonoBehaviour
     {
         Vector3 rotation = transform.rotation.eulerAngles;
 
-        float tiltX = Mathf.Abs(rotation.x);
+        float tiltX = Mathf.Abs(270 - Mathf.Abs(rotation.x));
         float tiltZ = Mathf.Abs(rotation.z);
 
-        return transform.rotation.y >= StandingThreshold;
+        return tiltX < StandingThreshold && tiltZ < StandingThreshold;
     }
 }
