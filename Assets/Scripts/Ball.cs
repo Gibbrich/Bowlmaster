@@ -6,24 +6,39 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class Ball : MonoBehaviour
 {
-    public Vector3 launchVelocity = new Vector3(0, 0, 200);
+    public bool isInPlay = false;
 
+    private Vector3 initialPosition;
+    private new Rigidbody rigidbody;
+    
     // Use this for initialization
     void Start()
     {
-        GetComponent<Rigidbody>().useGravity = false;
+        initialPosition = transform.position;
+        rigidbody = GetComponent<Rigidbody>();
+        rigidbody.useGravity = false;
     }
 
     public void Launch(Vector3 velocity)
     {
-        GameManager.IsGameStarted = true;
-        GetComponent<Rigidbody>().useGravity = true;
-        GetComponent<Rigidbody>().velocity = velocity;
+        isInPlay = true;
+        rigidbody.useGravity = true;
+        rigidbody.velocity = velocity;
         GetComponent<AudioSource>().Play();
     }
 
     // Update is called once per frame
     void Update()
     {
+    }
+
+    public void Reset()
+    {
+        isInPlay = false;
+        transform.position = initialPosition;
+        transform.rotation = Quaternion.identity;
+        rigidbody.velocity = Vector3.zero;
+        rigidbody.angularVelocity = Vector3.zero;
+        rigidbody.useGravity = false;
     }
 }

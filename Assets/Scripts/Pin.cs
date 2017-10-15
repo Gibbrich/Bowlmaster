@@ -6,8 +6,11 @@ public class Pin : MonoBehaviour
 {
     public float StandingThreshold = 10;
 
+    private new Rigidbody rigidbody;
+
     void Start()
     {
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -23,5 +26,25 @@ public class Pin : MonoBehaviour
         float tiltZ = Mathf.Abs(rotation.z);
 
         return tiltX < StandingThreshold && tiltZ < StandingThreshold;
+    }
+
+    public void Raise(float height)
+    {
+        if (IsStanding())
+        {
+            rigidbody.useGravity = false;
+            rigidbody.isKinematic = true;
+            transform.position += new Vector3(0, height, 0);
+        }
+    }
+
+    public void Lower(float height)
+    {
+        if (IsStanding())
+        {
+            rigidbody.useGravity = true;
+            rigidbody.isKinematic = false;
+            transform.position -= new Vector3(0, height, 0);
+        }
     }
 }

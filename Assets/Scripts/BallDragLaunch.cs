@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Ball))]
-public class DragLaunch : MonoBehaviour
+public class BallDragLaunch : MonoBehaviour
 {
     public GameObject Floor;
     
@@ -43,7 +43,7 @@ public class DragLaunch : MonoBehaviour
 
     private void Update()
     {
-        if (!GameManager.IsGameStarted && ballMovingDirectionBeforeStart != 0)
+        if (!ball.isInPlay && ballMovingDirectionBeforeStart != 0)
         {
             float maxX = (Floor.transform.localScale.x - ball.transform.localScale.x) / 2;
             float minX = -maxX;
