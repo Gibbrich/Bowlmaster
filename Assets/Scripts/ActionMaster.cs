@@ -7,82 +7,76 @@ public class ActionMaster
 {
     private int[] bowls = new int[21];
     private int bowl = 1;
-    private int lastBowlPinsCount = 0;
 
-    // todo refactor
     public Action Bowl(int pins)
     {
         if (pins < 0 || pins > 10)
         {
-            throw new ArgumentException("Invalid pins number. For first bowl must be in range [0; 10]");
+            throw new UnityException("Invalid pins");
         }
 
-        int pinsInGame = 10 - lastBowlPinsCount;
+        bowls[bowl - 1] = pins;
 
-        if (lastBowlPinsCount != 0 && pinsInGame - pins < 0)
+        if (bowl == 21)
         {
-            throw new ArgumentException(string.Format("Invalid pins number. For second bowl must be in range [0; {0}]", 10 - lastBowlPinsCount));
+            return Action.END_GAME;
         }
 
-        // other behaviour here, e.g. last frame
-
-        if (pins == 10)
+        // Hanld last-frame special cases
+        if (bowl >= 19 && pins == 10)
         {
-            Action action;
-            
-            if (bowl == 19)
+            bowl++;
+            return Action.RESET;
+        }
+        else if (bowl == 20)
+        {
+            bowl++;
+            if (bowls[19 - 1] == 10 && bowls[20 - 1] == 0)
             {
-                action = Action.RESET;
+                return Action.TIDY;
             }
-            else if (bowl == 21)
+            else if (bowls[19 - 1] + bowls[20 - 1] == 10)
             {
-                action = Action.END_GAME;
+                return Action.RESET;
+            }
+            else if (Bowl21Awarded())
+            {
+                return Action.TIDY;
             }
             else
             {
-                action = Action.END_TURN;
+                return Action.END_GAME;
             }
-            
-            bowl += 2;
-            return action;
         }
 
-        // if at the mid frame (or last frame)
         if (bowl % 2 != 0)
         {
-            Action action;
-            if (bowl == 21)
+            // First bowl of frame 1-9
+            if (pins == 10)
             {
-                action = Action.END_GAME;
-            }
-            else
-            {
-                action = Action.TIDY;
+                bowl += 2;
+                return Action.END_TURN;
             }
             
-            bowl++;
-            lastBowlPinsCount = pins;
-            return action;
+            bowl += 1;
+            return Action.TIDY;
         }
-        else
+        else if (bowl % 2 == 0)
         {
-            Action action;
-            
-            if (bowl == 20 && pinsInGame - pins == 0)
-            {
-                action = Action.RESET;
-            }
-            else
-            {
-                action = Action.END_TURN;
-            }
-            
-            bowl++;
-            lastBowlPinsCount = 0;
-            return action;
+            // Second bowl of frame 1-9
+            bowl += 1;
+            return Action.END_TURN;
         }
+
+        throw new UnityException("Not sure what action to return!");
     }
 
+    private bool Bowl21Awarded()
+    {
+        // Remember that arrays start counting at 0
+        return (bowls[19 - 1] + bowls[20 - 1] >= 10);
+    }
+    
     public enum Action
     {
         TIDY,

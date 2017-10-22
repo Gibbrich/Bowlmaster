@@ -15,7 +15,13 @@ public class ActionMasterTest
     {
         actionMaster = new ActionMaster();
     }
-    
+
+    [Test]
+    public void T00PassingTest()
+    {
+        Assert.AreEqual(1, 1);
+    }
+
     [Test]
     public void T01OneStrikeReturnsEndTurn()
     {
@@ -23,100 +29,120 @@ public class ActionMasterTest
     }
 
     [Test]
-    public void T02Bowl0To9ReturnsTidy()
+    public void T02Bowl8ReturnsTidy()
     {
-        actionMaster = new ActionMaster();
-        Assert.AreEqual(ActionMaster.Action.TIDY, actionMaster.Bowl(0));
-        
-        actionMaster = new ActionMaster();
-        Assert.AreEqual(ActionMaster.Action.TIDY, actionMaster.Bowl(5));
-        
-        actionMaster = new ActionMaster();
-        Assert.AreEqual(ActionMaster.Action.TIDY, actionMaster.Bowl(9));
-    }
-    
-    [Test]
-    public void T03BowlsSpareReturnsEndTurn()
-    {
-        actionMaster.Bowl(1);
-        Assert.AreEqual(ActionMaster.Action.END_TURN, actionMaster.Bowl(9));
-
-        // if player bowls first for 0 and second for 10 - it is also spare
-        actionMaster = new ActionMaster();
-        actionMaster.Bowl(0);
-        Assert.AreEqual(ActionMaster.Action.END_TURN, actionMaster.Bowl(10));
+        Assert.AreEqual(ActionMaster.Action.TIDY, actionMaster.Bowl(8));
     }
 
     [Test]
-    public void T04Bowls29ThrowsArgumentException()
+    public void T04Bowl28SpareReturnsEndTurn()
     {
-        // in case if 2nd call actionMaster.Bowl() with number of pins > remained on field
-        actionMaster.Bowl(2);
-        Assert.Throws<ArgumentException>(() => actionMaster.Bowl(9));
+        actionMaster.Bowl(8);
+        Assert.AreEqual(ActionMaster.Action.END_TURN, actionMaster.Bowl(2));
     }
 
     [Test]
-    public void T05BowlLess0OrMore10ThrowsArgumentException()
+    public void T05CheckResetAtStrikeInLastFrame()
     {
-        actionMaster = new ActionMaster();
-        Assert.Throws<ArgumentException>(() => actionMaster.Bowl(11));
-        
-        actionMaster = new ActionMaster();
-        Assert.Throws<ArgumentException>(() => actionMaster.Bowl(-1));
-    }
-
-    [Test]
-    public void T06BowlsTwiceReturnEndTurn()
-    {
-        actionMaster.Bowl(3);
-        Assert.AreEqual(ActionMaster.Action.END_TURN, actionMaster.Bowl(5));
-    }
-
-    [Test]
-    public void T07BowlSpare10FrameReturnReset()
-    {
-        for (int i = 0; i < 9; i++)
+        int[] rolls = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+        foreach (int roll in rolls)
         {
-            actionMaster.Bowl(3);
-            actionMaster.Bowl(3);
+            actionMaster.Bowl(roll);
         }
-
-        actionMaster.Bowl(3);
-        Assert.AreEqual(ActionMaster.Action.RESET, actionMaster.Bowl(7));
-    }
-
-    [Test]
-    public void T08Strike10FrameReturnReset()
-    {
-        for (int i = 0; i < 9; i++)
-        {
-            actionMaster.Bowl(3);
-            actionMaster.Bowl(3);
-        }
-        
         Assert.AreEqual(ActionMaster.Action.RESET, actionMaster.Bowl(10));
     }
 
     [Test]
-    public void T09BonusBowlReturnEndGame()
+    public void T06CheckResetAtSpareInLastFrame()
     {
-        // case bonus bowls strikes 0 pins
-        for (int i = 0; i < 10; i++)
+        int[] rolls = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+        foreach (int roll in rolls)
         {
-            actionMaster.Bowl(5);
-            actionMaster.Bowl(5);
+            actionMaster.Bowl(roll);
         }
-        
-        Assert.AreEqual(ActionMaster.Action.END_GAME, actionMaster.Bowl(0));
+        actionMaster.Bowl(1);
+        Assert.AreEqual(ActionMaster.Action.RESET, actionMaster.Bowl(9));
+    }
 
-        // case bonus bowl strikes 10 pins
-        actionMaster = new ActionMaster();
-        for (int i = 0; i < 10; i++)
+    [Test]
+    public void T07YouTubeRollsEndInEndGame()
+    {
+        int[] rolls = {8, 2, 7, 3, 3, 4, 10, 2, 8, 10, 10, 8, 0, 10, 8, 2};
+        foreach (int roll in rolls)
         {
-            actionMaster.Bowl(5);
-            actionMaster.Bowl(5);
+            actionMaster.Bowl(roll);
         }
-        
+        Assert.AreEqual(ActionMaster.Action.END_GAME, actionMaster.Bowl(9));
+    }
+
+    [Test]
+    public void T08GameEndsAtBowl20()
+    {
+        int[] rolls = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+        foreach (int roll in rolls)
+        {
+            actionMaster.Bowl(roll);
+        }
+        Assert.AreEqual(ActionMaster.Action.END_GAME, actionMaster.Bowl(1));
+    }
+
+    [Test]
+    public void T09Bowl20AfterStrikeReturnsTidy()
+    {
+        int[] rolls = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 10};
+        foreach (int roll in rolls)
+        {
+            actionMaster.Bowl(roll);
+        }
+
+        Assert.AreEqual(ActionMaster.Action.TIDY, actionMaster.Bowl(5));
+    }
+
+    [Test]
+    public void T09DarylBowl20Test()
+    {
+        int[] rolls = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 10};
+        foreach (int roll in rolls)
+        {
+            actionMaster.Bowl(roll);
+        }
+        Assert.AreEqual(ActionMaster.Action.TIDY, actionMaster.Bowl(5));
+    }
+
+    [Test]
+    public void T10BensBowl20Test()
+    {
+        int[] rolls = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 10};
+        foreach (int roll in rolls)
+        {
+            actionMaster.Bowl(roll);
+        }
+        Assert.AreEqual(ActionMaster.Action.TIDY, actionMaster.Bowl(0));
+    }
+
+    [Test]
+    public void T11NathanBowlIndexTest()
+    {
+        int[] rolls = {0, 10};
+        foreach (int roll in rolls)
+        {
+            actionMaster.Bowl(roll);
+        }
+
+        Assert.AreEqual(ActionMaster.Action.TIDY, actionMaster.Bowl(5));
+        Assert.AreEqual(ActionMaster.Action.END_TURN, actionMaster.Bowl(1));
+    }
+
+    [Test]
+    public void T12Dondi10thFrameTurkey()
+    {
+        int[] rolls = {1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1};
+        foreach (int roll in rolls)
+        {
+            actionMaster.Bowl(roll);
+        }
+        Assert.AreEqual(ActionMaster.Action.RESET, actionMaster.Bowl(10));
+        Assert.AreEqual(ActionMaster.Action.RESET, actionMaster.Bowl(10));
         Assert.AreEqual(ActionMaster.Action.END_GAME, actionMaster.Bowl(10));
     }
 }
