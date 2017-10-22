@@ -42,9 +42,9 @@ public class Pin : MonoBehaviour
     {
         if (IsStanding())
         {
+            transform.position -= new Vector3(0, height, 0);
             rigidbody.useGravity = true;
             rigidbody.isKinematic = false;
-            transform.position -= new Vector3(0, height, 0);
         }
     }
 }
