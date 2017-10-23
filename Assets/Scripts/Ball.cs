@@ -6,11 +6,16 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class Ball : MonoBehaviour
 {
-    public bool isInPlay = false;
+    public bool IsInPlay { get; set; }
 
     private Vector3 initialPosition;
     private new Rigidbody rigidbody;
-    
+
+    public Ball()
+    {
+        IsInPlay = false;
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -21,7 +26,7 @@ public class Ball : MonoBehaviour
 
     public void Launch(Vector3 velocity)
     {
-        isInPlay = true;
+        IsInPlay = true;
         rigidbody.useGravity = true;
         rigidbody.velocity = velocity;
         GetComponent<AudioSource>().Play();
@@ -34,7 +39,7 @@ public class Ball : MonoBehaviour
 
     public void Reset()
     {
-        isInPlay = false;
+        IsInPlay = false;
         transform.position = initialPosition;
         transform.rotation = Quaternion.identity;
         rigidbody.velocity = Vector3.zero;

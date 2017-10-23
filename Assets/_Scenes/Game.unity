@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -358,10 +358,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aad4a1b56ff02742a8d296171764b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastStandingCount: -1
-  DistanceToRaise: 50
   PinsCounter: {fileID: 1623830179}
   PinSet: {fileID: 1574590564714520, guid: 36c114b3486c3b84cae6f374c1166f41, type: 2}
+  DistanceToRaise: 50
 --- !u!95 &525632830
 Animator:
   serializedVersion: 3
@@ -740,20 +739,6 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_FalloffTable:
-    m_Table[0]: 0
-    m_Table[1]: 0
-    m_Table[2]: 0
-    m_Table[3]: 0
-    m_Table[4]: 0
-    m_Table[5]: 0
-    m_Table[6]: 0
-    m_Table[7]: 0
-    m_Table[8]: 0
-    m_Table[9]: 0
-    m_Table[10]: 0
-    m_Table[11]: 0
-    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -1404,6 +1389,11 @@ Prefab:
       propertyPath: Floor
       value: 
       objectReference: {fileID: 927183223}
+    - target: {fileID: 54819083171917540, guid: 2d3d613721ba9594c9b2d0d996311297,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2d3d613721ba9594c9b2d0d996311297, type: 2}
   m_IsPrefabParent: 0
