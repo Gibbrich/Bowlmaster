@@ -7,6 +7,8 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public bool IsInPlay { get; set; }
+    public bool IsEnteredPinSetter { get; private set; }
+    
 
     private Vector3 initialPosition;
     private new Rigidbody rigidbody;
@@ -14,6 +16,7 @@ public class Ball : MonoBehaviour
     public Ball()
     {
         IsInPlay = false;
+        IsEnteredPinSetter = false;
     }
 
     // Use this for initialization
@@ -32,18 +35,22 @@ public class Ball : MonoBehaviour
         GetComponent<AudioSource>().Play();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     public void Reset()
     {
         IsInPlay = false;
+        IsEnteredPinSetter = false;
         transform.position = initialPosition;
         transform.rotation = Quaternion.identity;
         rigidbody.velocity = Vector3.zero;
         rigidbody.angularVelocity = Vector3.zero;
         rigidbody.useGravity = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<PinSetter>())
+        {
+            IsEnteredPinSetter = true;
+        }
     }
 }

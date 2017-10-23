@@ -71,7 +71,7 @@ public class ActionMaster
         throw new UnityException("Not sure what action to return!");
     }
 
-    public static Action NexAction(List<int> pinFalls)
+    public static Action NextAction(List<int> pinFalls)
     {
         int pins = pinFalls[pinFalls.Count - 1];
 

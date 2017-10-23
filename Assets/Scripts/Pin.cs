@@ -48,4 +48,17 @@ public class Pin : MonoBehaviour
             rigidbody.isKinematic = false;
         }
     }
+    
+    public static int CountStanding()
+    {
+        int standingCount = 0;
+        foreach (Pin pin in FindObjectsOfType<Pin>())
+        {
+            if (pin.IsStanding())
+            {
+                standingCount++;
+            }
+        }
+        return standingCount;
+    }
 }
