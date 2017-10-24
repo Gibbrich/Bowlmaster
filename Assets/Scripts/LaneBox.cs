@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class LaneBox : MonoBehaviour
 {
-    public bool IsBallOutOfLane { get; set; }
-    
     private void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent<Ball>())
+        Ball ball = other.GetComponent<Ball>();
+        if (ball)
         {
-            // todo use this flag
-            IsBallOutOfLane = true;
+            ball.IsBallOutOfLane = true;
         }
     }
 }

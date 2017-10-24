@@ -8,4 +8,10 @@ public static class ScoreMaster
         // todo implement
         return frameList;
     }
+
+    public static List<int> ScoreCumulative(List<int> rolls)
+    {
+        // todo implement
+        return null;
+    }
 }

@@ -6,9 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class Ball : MonoBehaviour
 {
-    public bool IsInPlay { get; set; }
-    public bool IsEnteredPinSetter { get; private set; }
-    
+    public bool IsInPlay { get; private set; }
+    public bool IsEnteredPinSetter { get; set; }
+    public bool IsBallOutOfLane { get; set; }
 
     private Vector3 initialPosition;
     private new Rigidbody rigidbody;
@@ -17,6 +17,7 @@ public class Ball : MonoBehaviour
     {
         IsInPlay = false;
         IsEnteredPinSetter = false;
+        IsBallOutOfLane = false;
     }
 
     // Use this for initialization
@@ -39,6 +40,7 @@ public class Ball : MonoBehaviour
     {
         IsInPlay = false;
         IsEnteredPinSetter = false;
+        IsBallOutOfLane = false;
         transform.position = initialPosition;
         transform.rotation = Quaternion.identity;
         rigidbody.velocity = Vector3.zero;

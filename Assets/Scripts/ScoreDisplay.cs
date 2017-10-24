@@ -19,6 +19,11 @@ public class ScoreDisplay : MonoBehaviour
         // todo implement
     }
 
+    public void SetPinsCount(int pinStandingCount)
+    {
+        scoreText.text = pinStandingCount.ToString();
+    }
+
     public void SetScoreColor(Color color)
     {
         scoreText.color = color;

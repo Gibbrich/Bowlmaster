@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -274,6 +274,7 @@ GameObject:
   - component: {fileID: 525632830}
   - component: {fileID: 525632829}
   - component: {fileID: 525632831}
+  - component: {fileID: 525632832}
   m_Layer: 0
   m_Name: PinSetter
   m_TagString: Untagged
@@ -358,9 +359,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aad4a1b56ff02742a8d296171764b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PinsCounter: {fileID: 1623830179}
-  PinSet: {fileID: 1574590564714520, guid: 36c114b3486c3b84cae6f374c1166f41, type: 2}
-  DistanceToRaise: 50
+  pinSet: {fileID: 1574590564714520, guid: 36c114b3486c3b84cae6f374c1166f41, type: 2}
+  distanceToRaise: 50
 --- !u!95 &525632830
 Animator:
   serializedVersion: 3
@@ -387,6 +387,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23b3a7183e38adf4896bddf1b166076c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &525632832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 525632824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a89ea9f2f1c9d1d4a94490c0e4eb4e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &594337182
@@ -739,6 +750,20 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
+  m_FalloffTable:
+    m_Table[0]: 0
+    m_Table[1]: 0
+    m_Table[2]: 0
+    m_Table[3]: 0
+    m_Table[4]: 0
+    m_Table[5]: 0
+    m_Table[6]: 0
+    m_Table[7]: 0
+    m_Table[8]: 0
+    m_Table[9]: 0
+    m_Table[10]: 0
+    m_Table[11]: 0
+    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -1014,6 +1039,7 @@ GameObject:
   - component: {fileID: 1623830178}
   - component: {fileID: 1623830180}
   - component: {fileID: 1623830179}
+  - component: {fileID: 1623830181}
   m_Layer: 5
   m_Name: PinsCounter
   m_TagString: Untagged
@@ -1078,6 +1104,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1623830177}
+--- !u!114 &1623830181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1623830177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782f4814b281852499a93282dddae0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1653007805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,46 +1472,6 @@ Prefab:
     - target: {fileID: 4846829834942682, guid: 36c114b3486c3b84cae6f374c1166f41, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4272420375949294, guid: 36c114b3486c3b84cae6f374c1166f41, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4715721856076212, guid: 36c114b3486c3b84cae6f374c1166f41, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4350337914745160, guid: 36c114b3486c3b84cae6f374c1166f41, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4670548775777426, guid: 36c114b3486c3b84cae6f374c1166f41, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4038870787911324, guid: 36c114b3486c3b84cae6f374c1166f41, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4849903908827946, guid: 36c114b3486c3b84cae6f374c1166f41, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4633525851563358, guid: 36c114b3486c3b84cae6f374c1166f41, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4420393725865650, guid: 36c114b3486c3b84cae6f374c1166f41, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4926974060837744, guid: 36c114b3486c3b84cae6f374c1166f41, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233488596308802, guid: 36c114b3486c3b84cae6f374c1166f41, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36c114b3486c3b84cae6f374c1166f41, type: 2}

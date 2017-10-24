@@ -8,7 +8,7 @@ public class PinCounter : MonoBehaviour
     private float lastChangeTime;
     private int pinsStandingCount = 10;
 
-    public void ResetPinsStandingCount()
+    public void Reset()
     {
         pinsStandingCount = 10;
     }
@@ -26,6 +26,7 @@ public class PinCounter : MonoBehaviour
     {
         // update the lastStandingCount
         int currentStanding = Pin.CountStanding();
+        GameManager.Instance.ScoreDisplay.SetPinsCount(currentStanding);
         if (currentStanding != lastStandingCount)
         {
             lastStandingCount = currentStanding;
@@ -51,4 +52,12 @@ public class PinCounter : MonoBehaviour
         GameManager.Instance.UpdateScore(pinFall);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        Ball ball = other.GetComponent<Ball>();
+        if (ball)
+        {
+            ball.IsEnteredPinSetter = true;
+        }
+    }
 }

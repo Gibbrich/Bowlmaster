@@ -56,7 +56,7 @@ public class PinSetter : MonoBehaviour
     public void RenewPins()
     {
         Instantiate(pinSet, new Vector3(0, distanceToRaise, 1829), Quaternion.identity);
-        GameManager.Instance.PinCounter.ResetPinsStandingCount();
+        GameManager.Instance.PinCounter.Reset();
         
         // after instantiating need disable gravity, otherwise position/rotation of pins will change
         foreach (Pin pin in FindObjectsOfType<Pin>())
