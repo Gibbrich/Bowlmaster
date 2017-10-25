@@ -5,9 +5,15 @@ public static class ScoreMaster
     public static List<int> ScoreFrames(List<int> rolls)
     {
         List<int> frameList = new List<int>();
-        int frame = 1;
         for (int i = 0; i < rolls.Count; i++)
         {
+            // if frames in list = 10, stop counting other rolls (avoid case, when 1st bowl on 10 frame is strike)
+            if (frameList.Count == 10)
+            {
+                break;
+            }
+            
+            // handle strike
             int firstBowl = rolls[i];
             if (firstBowl == 10)
             {
@@ -18,20 +24,16 @@ public static class ScoreMaster
                     
                     frameList.Add(firstBowl + secondBowl + thirdBowl);
                 }
-                
-                //when strike at first bowl on 10 frame - just return
-                if (frame == 10)
-                {
-                    return frameList;
-                }
             }
             else
             {
+                // handle non-strike
                 if (i + 1 < rolls.Count)
                 {
                     i++;
                     int secondBowl = rolls[i];
 
+                    // handle spare
                     if (firstBowl + secondBowl == 10)
                     {
                         if (i + 1 < rolls.Count)
@@ -43,12 +45,11 @@ public static class ScoreMaster
                     }
                     else
                     {
+                        // handle common bowl
                         frameList.Add(firstBowl + secondBowl);
                     }
                 }
             }
-            
-            frame++;
         }
         return frameList;
     }
