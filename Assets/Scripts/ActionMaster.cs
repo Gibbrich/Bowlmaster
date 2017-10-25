@@ -5,10 +5,25 @@ using UnityEngine;
 
 public class ActionMaster
 {
+    
+
     private int[] bowls = new int[21];
     private int bowl = 1;
 
-    public Action Bowl(int pins)
+    public static Action NextAction(List<int> pinfFalls)
+    {
+        ActionMaster am = new ActionMaster();
+        Action currentAction = new Action();
+
+        foreach (int pinFall in pinfFalls)
+        {
+            currentAction = am.Bowl(pinFall);
+        }
+
+        return currentAction;
+    }
+
+    private Action Bowl(int pins)
     {
         if (pins < 0 || pins > 10)
         {
@@ -22,7 +37,7 @@ public class ActionMaster
             return Action.END_GAME;
         }
 
-        // Hanld last-frame special cases
+        // Handle last-frame special cases
         if (bowl >= 19 && pins == 10)
         {
             bowl++;
@@ -51,96 +66,32 @@ public class ActionMaster
 
         if (bowl % 2 != 0)
         {
-            // First bowl of frame 1-9
+            // First bowl of frame
             if (pins == 10)
             {
                 bowl += 2;
                 return Action.END_TURN;
             }
-            
-            bowl += 1;
-            return Action.TIDY;
-        }
-        else if (bowl % 2 == 0)
-        {
-            // Second bowl of frame 1-9
-            bowl += 1;
-            return Action.END_TURN;
-        }
-
-        throw new UnityException("Not sure what action to return!");
-    }
-
-    public static Action NextAction(List<int> pinFalls)
-    {
-        int pins = pinFalls[pinFalls.Count - 1];
-
-        if (pins < 0 || pins > 10)
-        {
-            throw new UnityException("Invalid pins");
-        }
-
-        int bowl = pinFalls.Count;
-        
-        if (bowl == 21)
-        {
-            return Action.END_GAME;
-        }
-
-        // Hanld last-frame special cases
-        if (bowl >= 19 && pins == 10)
-        {
-            return Action.RESET;
-        }
-        else if (bowl == 20)
-        {
-            if (pinFalls[19 - 1] == 10 && pinFalls[20 - 1] == 0)
-            {
-                return Action.TIDY;
-            }
-            else if (pinFalls[19 - 1] + pinFalls[20 - 1] == 10)
-            {
-                return Action.RESET;
-            }
-            else if (Bowl21Awarded(pinFalls))
-            {
-                return Action.TIDY;
-            }
             else
             {
-                return Action.END_GAME;
+                bowl += 1;
+                return Action.TIDY;
             }
-        }
-
-        if (bowl % 2 != 0)
-        {
-            // First bowl of frame 1-9
-            if (pins == 10)
-            {
-                return Action.END_TURN;
-            }
-            
-            return Action.TIDY;
         }
         else if (bowl % 2 == 0)
         {
-            // Second bowl of frame 1-9
+            // Second bowl of frame
+            bowl += 1;
             return Action.END_TURN;
         }
 
         throw new UnityException("Not sure what action to return!");
-    }
-
-    private static bool Bowl21Awarded(List<int> pinFalls)
-    {
-        // Remember that arrays start counting at 0
-        return pinFalls[19 - 1] + pinFalls[20 - 1] >= 10;
     }
 
     private bool Bowl21Awarded()
     {
         // Remember that arrays start counting at 0
-        return (bowls[19 - 1] + bowls[20 - 1] >= 10);
+        return bowls[19 - 1] + bowls[20 - 1] >= 10;
     }
     
     public enum Action
