@@ -1,97 +1,67 @@
-﻿using System;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
-public class ActionMaster
+public static class ActionMaster
 {
-    
-
-    private int[] bowls = new int[21];
-    private int bowl = 1;
-
-    public static Action NextAction(List<int> pinfFalls)
+    public static Action NextAction(List<int> rolls)
     {
-        ActionMaster am = new ActionMaster();
-        Action currentAction = new Action();
+        Action nextAction = Action.UNDEFINED;
 
-        foreach (int pinFall in pinfFalls)
+        for (int i = 0; i < rolls.Count; i++)
         {
-            currentAction = am.Bowl(pinFall);
-        }
+            // Step through rolls
 
-        return currentAction;
-    }
-
-    private Action Bowl(int pins)
-    {
-        if (pins < 0 || pins > 10)
-        {
-            throw new UnityException("Invalid pins");
-        }
-
-        bowls[bowl - 1] = pins;
-
-        if (bowl == 21)
-        {
-            return Action.END_GAME;
-        }
-
-        // Handle last-frame special cases
-        if (bowl >= 19 && pins == 10)
-        {
-            bowl++;
-            return Action.RESET;
-        }
-        else if (bowl == 20)
-        {
-            bowl++;
-            if (bowls[19 - 1] == 10 && bowls[20 - 1] == 0)
+            if (i == 20)
             {
-                return Action.TIDY;
+                nextAction = Action.END_GAME;
             }
-            else if (bowls[19 - 1] + bowls[20 - 1] == 10)
+            else if (i >= 18 && rolls[i] == 10)
             {
-                return Action.RESET;
+                // Handle last-frame special cases
+                nextAction = Action.RESET;
             }
-            else if (Bowl21Awarded())
+            else if (i == 19)
             {
-                return Action.TIDY;
+                if (rolls[18] == 10 && rolls[19] == 0)
+                {
+                    nextAction = Action.TIDY;
+                }
+                else if (rolls[18] + rolls[19] == 10)
+                {
+                    nextAction = Action.RESET;
+                }
+                else if (rolls[18] + rolls[19] >= 10)
+                {
+                    // Roll 21 awarded
+                    nextAction = Action.TIDY;
+                }
+                else
+                {
+                    nextAction = Action.END_GAME;
+                }
+            }
+            else if (i % 2 == 0)
+            {
+                // First bowl of frame
+                if (rolls[i] == 10)
+                {
+                    rolls.Insert(i, 0); // Insert virtual 0 after strike
+                    nextAction = Action.END_TURN;
+                }
+                else
+                {
+                    nextAction = Action.TIDY;
+                }
             }
             else
             {
-                return Action.END_GAME;
+                // Second bowl of frame
+                nextAction = Action.END_TURN;
             }
         }
 
-        if (bowl % 2 != 0)
-        {
-            // First bowl of frame
-            if (pins == 10)
-            {
-                bowl += 2;
-                return Action.END_TURN;
-            }
-            else
-            {
-                bowl += 1;
-                return Action.TIDY;
-            }
-        }
-        else if (bowl % 2 == 0)
-        {
-            // Second bowl of frame
-            bowl += 1;
-            return Action.END_TURN;
-        }
-
-        throw new UnityException("Not sure what action to return!");
-    }
-
-    private bool Bowl21Awarded()
-    {
-        // Remember that arrays start counting at 0
-        return bowls[19 - 1] + bowls[20 - 1] >= 10;
+        return nextAction;
     }
     
     public enum Action
@@ -99,6 +69,7 @@ public class ActionMaster
         TIDY,
         RESET,
         END_TURN,
-        END_GAME
+        END_GAME,
+        UNDEFINED
     }
 }

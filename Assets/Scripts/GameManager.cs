@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    private List<int> pins;
+    private List<int> rolls;
     private PinSetter pinSetter;
     public ScoreDisplay ScoreDisplay { get; private set; }
     public PinCounter PinCounter { get; private set; }
@@ -15,7 +15,7 @@ public class GameManager : Singleton<GameManager>
     {
         base.Start();
         
-        pins = new List<int>();
+        rolls = new List<int>();
         pinSetter = FindObjectOfType<PinSetter>();
         ScoreDisplay = FindObjectOfType<ScoreDisplay>();
         Ball = FindObjectOfType<Ball>();
@@ -29,18 +29,12 @@ public class GameManager : Singleton<GameManager>
 
     public void UpdateScore(int pinFall)
     {
-        pins.Add(pinFall);
-        if (pinFall == 10 && pins.Count % 2 != 0)
-        {
-            // if strike was on 1st bowl, add 0 to the pins, as if 2nd bowl was 0
-            pins.Add(0);
-        }        
+        rolls.Add(pinFall);      
 
-        List<int> scoreFrames = ScoreMaster.ScoreFrames(pins);
-        ScoreDisplay.UpdateScore(scoreFrames);
-        
-        ActionMaster.Action action = ActionMaster.NextAction(pins);
-        pinSetter.PerformAction(action);
+        ScoreDisplay.FillFrames(ScoreMaster.ScoreCumulative(rolls));
+        ScoreDisplay.FillRolls(rolls);
+
+        pinSetter.PerformAction(ActionMaster.NextAction(rolls));
         
         Ball.Reset();
     }

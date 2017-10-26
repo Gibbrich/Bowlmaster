@@ -18,7 +18,7 @@ public class PinCounter : MonoBehaviour
         if (GameManager.Instance.Ball.IsEnteredPinSetter)
         {
             UpdateStandingCount();
-            GameManager.Instance.ScoreDisplay.SetScoreColor(Color.red);
+//            GameManager.Instance.ScoreDisplay.SetScoreColor(Color.red);
         }
     }
     
@@ -26,7 +26,7 @@ public class PinCounter : MonoBehaviour
     {
         // update the lastStandingCount
         int currentStanding = Pin.CountStanding();
-        GameManager.Instance.ScoreDisplay.SetPinsCount(currentStanding);
+//        GameManager.Instance.ScoreDisplay.SetPinsCount(currentStanding);
         if (currentStanding != lastStandingCount)
         {
             lastStandingCount = currentStanding;
